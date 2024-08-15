@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Carbon Footprint Calculator</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#calculate">Calculate</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="intro">
+            <h2>Calculate Your Carbon Footprint</h2>
+            <p>Find out how your activities contribute to climate change and learn how to reduce your carbon footprint.</p>
+        </div>
+    </section>
+
+    <section id="calculate">
+        <div class="container">
+            <form id="carbonForm">
+                <div class="form-group">
+                    <label for="activityType">Select Activity:</label>
+                    <select id="activityType" name="activityType">
+                        <option value="transport">Transportation</option>
+                        <option value="electricity">Electricity Usage</option>
+                        <option value="coal_mining">Coal Mining</option>
+                        <option value="general">General Activities</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="activityData">Enter Data (e.g., miles traveled, kWh used):</label>
+                    <input type="number" id="activityData" name="activityData" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration (e.g., days, hours):</label>
+                    <input type="number" id="duration" name="duration" required>
+                </div>
+                <button type="submit">Calculate Carbon Footprint</button>
+            </form>
+
+            <div id="results" class="results" style="display: none;">
+                <h2>Results</h2>
+                <div id="chartContainer"></div>
+                <p id="emissionResult"></p>
+                <p id="recommendationResult"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="about">
+        <div class="footer-content">
+            <h3>About Us</h3>
+            <p>We are committed to helping you reduce your carbon footprint and contribute to a sustainable future.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
